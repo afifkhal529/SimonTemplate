@@ -19,11 +19,18 @@ namespace SimonSays
         private void GameOverScreen_Load(object sender, EventArgs e)
         {
             //TODO: show the length of the pattern
+            lengthLabel.Text = "{guess}";
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             //TODO: close this screen and open the MenuScreen
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            MenuScreen ms = new MenuScreen();
+            f.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }

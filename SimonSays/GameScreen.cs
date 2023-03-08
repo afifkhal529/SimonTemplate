@@ -60,7 +60,7 @@ namespace SimonSays
                     Refresh();
                     Thread.Sleep(1000);
                     greenButton.BackColor = Color.Green;
-                    Refresh();
+                    Refresh(); //
                     
                 }
 
